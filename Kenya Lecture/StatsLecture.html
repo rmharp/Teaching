@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Introduction to Statistics</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Riley Harper" />
+    <script src="libs/header-attrs-2.25/header-attrs.js"></script>
+    <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view-0.2.6/tile-view.js"></script>
+    <script src="libs/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="libs/shareon-1.4.1/shareon.min.css" rel="stylesheet" />
+    <script src="libs/shareon-1.4.1/shareon.min.js"></script>
+    <link href="libs/xaringanExtra-shareagain-0.2.6/shareagain.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
+    <script src="libs/js-cookie-3.0.0/js.cookie.js"></script>
+    <script src="libs/peerjs-1.3.1/peerjs.min.js"></script>
+    <script src="libs/tiny.toast-1.0.0/toast.min.js"></script>
+    <link href="libs/xaringanExtra-broadcast-0.2.6/broadcast.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-broadcast-0.2.6/broadcast.js"></script>
+    <script src="libs/fabric-4.3.1/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#a4c4f4"],"pen_size":8,"eraser_size":30,"palette":[]}) })</script>
+    <script src="libs/xaringanExtra_fit-screen-0.2.6/fit-screen.js"></script>
+    <link rel="stylesheet" href="StatsLecture.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Introduction to Statistics
+]
+.author[
+### Riley Harper
+]
+.institute[
+### UNC-Chapel Hill
+]
+
+---
+
+
+class: center, middle
+
+# **What is Statistics?**
+
+### "A branch of mathematics dealing with the collection, analysis, interpretation, and presentation of masses of numerical data."
+
+---
+class: middle
+# What does this mean today?
+- Descriptive Statistics
+- Hypothesis Testing
+- Big Data
+- Data Cleaning
+- Data Processing
+- Supervised/Unsupervised Learned
+
+---
+class: center, middle, full-background
+background-image: url('./media/handtouch.png')
+
+---
+class: center, middle,
+##Definition
+#Summation
+
+&lt;img src="./media/sum.png" alt = "Summation" height="120px"/&gt;
+
+####where &lt;i&gt;i&lt;/i&gt; is the index of summation; &lt;i&gt;a&lt;sub&gt;i&lt;/sub&gt;&lt;/i&gt; is an indexed variable representing each term of the sum; &lt;i&gt;m&lt;/i&gt; is the lower bound of summation, and &lt;i&gt;n&lt;/i&gt; is the upper bound of summation. The "&lt;i&gt;i = m&lt;/i&gt;" under the summation symbol means that the index &lt;i&gt;i&lt;/i&gt; starts out equal to &lt;i&gt;m&lt;/i&gt;. The index, &lt;i&gt;i&lt;/i&gt;, is incremented by one for each successive term, stopping when &lt;i&gt;i = n&lt;/i&gt;.
+
+
+---
+##Example
+#Summation
+
+####The summation of `\(i\)` from `\(i = 1\)` to `\(3\)` is:
+
+$$
+\sum_{i=1}^{3} i
+$$
+
+####The summation of `\(i^2\)` from `\(i = 3\)` to `\(6\)` is:
+
+$$
+\sum_{i=3}^{6} i^2
+$$
+
+####The summation of `\(\frac{1}{2^n}\)` from `\(i = 0\)` to `\(\infty\)` is:
+
+$$
+\sum_{i=0}^{\infty} \frac{1}{2^n}
+$$
+
+---
+##Example
+#Summation
+
+####The summation of `\(i\)` from `\(i = 1\)` to `\(3\)` is:
+
+$$
+\sum_{i=1}^{3} i = 1 + 2 + 3 = 6
+$$
+
+####The summation of `\(i^2\)` from `\(i = 3\)` to `\(6\)` is:
+
+$$
+\sum_{i=3}^{6} i^2 = 3^2 + 4^2 + 5^2 + 6^2 = 86
+$$
+
+####The summation of `\(\frac{1}{2^n}\)` from `\(i = 0\)` to `\(\infty\)` is:
+
+$$
+\sum_{i=0}^{\infty} \frac{1}{2^n} = \frac{1}{1} + \frac{1}{2} + \frac{1}{4} + ... = 2 \quad\text{(Convergent series!)}
+$$
+
+---
+class: center, middle,
+##Definition
+#Arithmetic Mean (Average)
+
+&lt;img src="./media/average.png" alt = "Summation" height="120px"/&gt;
+
+#### where &lt;i&gt;n&lt;/i&gt; is the number of observations for a given sample; &lt;i&gt;x&lt;sub&gt;i&lt;/sub&gt;&lt;/i&gt; is an indexed variable representing each observation of a total of &lt;i&gt;n&lt;/i&gt; observations; &lt;i&gt;x&amp;#773;&lt;/i&gt; is the symbol most often used for average though in practice this can be used for other purposes.
+
+---
+##Example
+#Arithmetic Mean (Average)
+
+#### Find the mean of the following set of numbers: 2, 4, 6, 8, 10.
+
+$$
+\frac{1}{5}\sum_{i=1}^{5} x_i = \frac{2 + 4 + 6 + 8 + 10}{5}
+$$
+
+#### Find the weighted mean of the following set of numbers: 80, 85, 90, and 95 with respective weights of 1, 2, 3, and 4.
+
+&lt;p style="text-align: center;"&gt;&lt;img src="./media/weighted average1.png" alt="Weighted Average" style="height:80px;"/&gt;&lt;/p&gt;
+
+#### Find the mean from a frequency distribution of the following set of numbers: 2, 3, 5, 7. with respective frequencies of 3, 5, 2, 4.
+
+&lt;p style="text-align: center;"&gt;&lt;img src="./media/frequency average.png" alt="Frequency Average" style="height:80px;"/&gt;&lt;/p&gt;
+
+---
+##Example
+#Arithmetic Mean (Average)
+
+#### Find the mean of the following set of numbers: 2, 4, 6, 8, 10.
+
+$$
+\frac{1}{5}\sum_{i=1}^{5} x_i = \frac{2 + 4 + 6 + 8 + 10}{5} = \frac{30}{5} = 6
+$$
+
+#### Find the weighted mean of the following set of numbers: 80, 85, 90, and 95 with respective weights of 1, 2, 3, and 4.
+
+&lt;p style="text-align: center;"&gt;&lt;img src="./media/weighted average answer.png" alt="Weighted Average Answer" style="height:80px;"/&gt;&lt;/p&gt;
+
+#### Find the mean from a frequency distribution of the following set of numbers: 2, 3, 5, 7 with respective frequencies of 3, 5, 2, 4.
+
+&lt;p style="text-align: center;"&gt;&lt;img src="./media/frequency average answer.png" alt="Frequency Average Answer" style="height:80px;"/&gt;&lt;/p&gt;
+
+---
+class: center, middle,
+##Definition
+#Median
+
+&lt;p style="text-align: center;"&gt;&lt;img src="./media/median.png" alt = "Median Definition" height="200px"/&gt;&lt;/p&gt;
+
+#### where &lt;em&gt;n&lt;/em&gt; is the number of observations in a sorted dataset; &lt;em&gt;x&lt;sub&gt;i&lt;/sub&gt;&lt;/em&gt; is the &lt;em&gt;i&lt;sup&gt;th&lt;/sup&gt;&lt;/em&gt; observation in the dataset such that for an odd number of observations, the median is the middle value, and for an even number of observations, the median is the average of the two middle values.
+
+---
+##Example
+#Median
+
+#### Find the median of the following set of numbers: 3, 1, 4.
+
+&lt;p style="text-align: center;"&gt;&lt;img src="./media/easy median.png" alt = "Easy Median Problem" height="50px"/&gt;&lt;/p&gt;
+
+#### Find the median of the following set of numbers: 5, 3, 8, 7.
+
+&lt;p style="text-align: center;"&gt;&lt;img src="./media/medium median.png" alt = "Medium Median Problem" height="60px"/&gt;&lt;/p&gt;
+
+#### Find the median from a frequency distribution of the following set of numbers: 2, 4, 6 with respective frequencies of 2, 3, 4.
+
+&lt;p style="text-align: center;"&gt;&lt;img src="./media/hard median.png" alt = "Hard Median Problem" height="45px"/&gt;&lt;/p&gt;
+
+---
+##Example
+#Median
+
+#### Find the median of the following set of numbers: 3, 1, 4.
+
+&lt;p style="text-align: center;"&gt;&lt;img src="./media/easy median answer.png" alt = "Easy Median Problem Answer" height="50px"/&gt;&lt;/p&gt;
+
+#### Find the median of the following set of numbers: 5, 3, 8, 7.
+
+&lt;p style="text-align: center;"&gt;&lt;img src="./media/medium median answer.png" alt = "Medium Median Problem Answer" height="60px"/&gt;&lt;/p&gt;
+
+#### Find the median from a frequency distribution of the following set of numbers: 2, 4, 6 with respective frequencies of 2, 3, 4.
+
+&lt;p style="text-align: center;"&gt;&lt;img src="./media/hard median answer.png" alt = "Hard Median Problem Answer" height="45px"/&gt;&lt;/p&gt;
+
+---
+class: center, middle,
+##Definition
+#Mode
+
+&lt;p style="text-align: center;"&gt;&lt;img src="./media/mode.png" alt = "Mode Definition" height="100px"/&gt;&lt;/p&gt;
+
+#### where &lt;em&gt;x&lt;/em&gt; is a value in the dataset, &lt;em&gt;x&lt;sub&gt;i&lt;/sub&gt;&lt;/em&gt; represents each distinct value in the dataset, and &lt;em&gt;n&lt;/em&gt; is the number of distinct values; the mode is the value of &lt;em&gt;x&lt;/em&gt; for which the sum of the indicator function is maximized such that the most frequently occurring value in the dataset is identified
+
+---
+##Example
+#Mode
+
+#### Find the mode of the following set of numbers: 2, 2, 3, 4, 4, 4, 5.
+
+&lt;p style="text-align: center;"&gt;&lt;img src="./media/mode problem.png" alt = "Easy Mode Problem Answer" height="70px"/&gt;&lt;/p&gt;
+
+#### Find the mode of the following set of numbers: 1, 1, 2, 3, 3, 3, 4, 4, 4, 5.
+
+&lt;p style="text-align: center;"&gt;&lt;img src="./media/mode problem.png" alt = "Medium Mode Problem Answer" height="70px"/&gt;&lt;/p&gt;
+
+#### Find the mode from a frequency distribution of the following set of numbers: 1, 2, 3, 4 with respective frequencies of 4, 2, 5, 5.
+
+&lt;p style="text-align: center;"&gt;&lt;img src="./media/frequency mode problem.png" alt = "Hard Mode Problem Answer" height="70px"/&gt;&lt;/p&gt;
+
+---
+##Example
+#Mode
+
+#### Find the mode of the following set of numbers: 2, 2, 3, 4, 4, 4, 5.
+
+&lt;em&gt;In this dataset, the indicator function would have the highest sum for the number 4, such that the mode of the dataset is 4.&lt;/em&gt;
+
+#### Find the mode of the following set of numbers: 1, 1, 2, 3, 3, 3, 4, 4, 4, 5.
+
+&lt;em&gt;In this dataset, the indicator function would have the highest sum for the numbers 3 and 4, such that the dataset is bimodal with modes 3 and 4.&lt;/em&gt;
+
+#### Find the mode from a frequency distribution of the following set of numbers: 1, 2, 3, 4 with respective frequencies of 4, 2, 5, 5.
+
+&lt;em&gt;In this distribution, the indicator function will be maximized for the values 3 and 4, such that the dataset is bimodal with modes 3 and 4.&lt;/em&gt;
+
+---
+class: center, middle
+##Definition
+#Range
+
+&lt;p style="text-align: center;"&gt;&lt;img src="./media/range.png" alt = "Range Definition" height="50px"/&gt;&lt;/p&gt;
+
+#### where &lt;em&gt;x&lt;sub&gt;i&lt;/sub&gt;&lt;/em&gt; represents individual observations in a data set, and the range is a measure of the spread or dispersion of the values in the data set, calculated as the difference between the maximum and minimum observed values
+
+---
+##Example
+#Range
+
+#### Find the range of the following set of numbers: 5, 8, 3, 12.
+$$
+\text{max}(x_i) - \text{min}(x_i) = 12 - 3
+$$
+
+#### Find the range of the following set of numbers: -7, -3, 2, 5, 10.
+
+$$
+\text{max}(x_i) - \text{min}(x_i) = 10 - (-7)
+$$
+
+#### Find the range from a frequency distribution of the following set of numbers: 2, 4, 6, 9 with respective frequencies of 0, 3, 2, 1.
+
+
+$$
+\text{max}(x_i) - \text{min}(x_i) = 9 - 4
+$$
+
+---
+##Example
+#Range
+
+#### Find the range of the following set of numbers: 5, 8, 3, 12.
+$$
+\text{max}(x_i) - \text{min}(x_i) = 12 - 3 = 9
+$$
+
+#### Find the range of the following set of numbers: -7, -3, 2, 5, 10.
+
+$$
+\text{max}(x_i) - \text{min}(x_i) = 10 - (-7) = 17
+$$
+
+#### Find the range from a frequency distribution of the following set of numbers: 2, 4, 6, 9 with respective frequencies of 0, 3, 2, 1.
+
+
+$$
+\text{max}(x_i) - \text{min}(x_i) = 9 - 4 = 5
+$$
+
+---
+class: middle
+### **When to use average vs. median?**
+
+&lt;p style="text-align: center;"&gt;&lt;img src="./media/graphs.png" alt = "Graph" height="300px"/&gt;&lt;/p&gt;
+
+---
+class: middle
+### **What about now?**
+
+&lt;p style="text-align: center;"&gt;&lt;img src="./media/skew.png" alt = "Skewed Graphs" height="300px"/&gt;&lt;/p&gt;
+
+---
+class: center, middle
+##Definition
+#Normal Distribution
+
+&lt;p style="text-align: center;"&gt;&lt;img src="./media/normal_distribution.png" alt = "Normal Distribution Definition" height="120px"/&gt;&lt;/p&gt;
+
+#### where &lt;em&gt;x&lt;/em&gt; represents a variable, &lt;em&gt;μ&lt;/em&gt; is the mean of the distribution, &lt;em&gt;σ&lt;/em&gt; is the standard deviation, &lt;em&gt;σ&lt;sup&gt;2&lt;/sup&gt;&lt;/em&gt; is the variance, and &lt;em&gt;e&lt;/em&gt; is Euler's number, the base of the natural logarithms. The normal distribution is symmetrical, with a bell-shaped curve where the majority of observations cluster around the mean, and probabilities for &lt;em&gt;x&lt;/em&gt; taper off symmetrically in both directions from the mean
+
+---
+### **Are there other distributions?**
+
+---
+### **Are there other distributions?**
+- Poisson Distribution
+- Heavy-Tailed Distribution
+- Tukey's Lambda Distribution
+- Exponential Distribution
+- Uniform Distribution
+- Binomial Distribution
+- Geometric Distribution
+- Beta Distribution
+
+####Each distribution has its own unique properties and applications, ranging from modeling the number of events occurring in a fixed interval of time or space (Poisson Distribution), to describing outcomes with only two possible values (Binomial Distribution), to modeling waiting times (Exponential Distribution), ...
+
+---
+class: center, middle
+### **What tools exist to help with data cleaning, modeling, and analysis?**
+
+&lt;table style="width:100%; margin-top: 20px;"&gt;
+  &lt;tr&gt;
+    &lt;td style="width:50%;"&gt;&lt;img src="./media/R_logo.png" alt="R Logo" height="120px"/&gt;&lt;br&gt;&lt;strong style="font-size: larger;"&gt;R&lt;/strong&gt;&lt;/td&gt;
+    &lt;td style="width:50%;"&gt;&lt;img src="./media/Python_logo.png" alt="Python Logo" height="120px"/&gt;&lt;br&gt;&lt;strong font-size: larger;&gt;Python&lt;/strong&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+
+####and other point and click software like Jamovi and SPSS for those who would prefer as little programming as possible. Note that there are many other languages available for data analysis other than R and Python though today these are the two most often used languages for this purpose.
+
+---
+### **How can I learn to code with open-source?**
+&lt;p&gt;With &lt;em&gt;open source&lt;/em&gt; through GitHub, you can host and review code, manage projects, and build software alongside 50 million developers.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pros of Open Source for Learning:&lt;/strong&gt;&lt;/p&gt;
+- &lt;strong&gt;Collaboration:&lt;/strong&gt; Engage with a community of learners and developers.
+- &lt;strong&gt;Transparency:&lt;/strong&gt; Access the source code and understand the inner workings.
+- &lt;strong&gt;Diversity of Projects:&lt;/strong&gt; Contribute to projects that range from beginner-friendly to advanced.
+- &lt;strong&gt;Real-World Experience:&lt;/strong&gt; Work on projects that are used in the real world.
+- &lt;strong&gt;Resources and Tools:&lt;/strong&gt; Utilize a plethora of free tools and resources available for learning.
+
+---
+class: center, middle
+#StatQuest
+&lt;h3 align="center"&gt;&lt;a href="https://www.youtube.com/watch?v=SzZ6GpcfoQY&amp;ab_channel=StatQuestwithJoshStarmer"&gt;Calculating the Mean, Variance and Standard Deviation, Clearly Explained!!!&lt;/a&gt;&lt;/h3&gt;
+
+---
+class: center, middle
+# **Questions?**
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
