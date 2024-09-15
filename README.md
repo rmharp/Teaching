@@ -42,4 +42,4 @@ To contribute:
 
 ## License
 
-This repository is open-sourced under the MIT License, meaning you're free to use, modify, and distribute the material, as long as proper attribution is given.
+This repository is open-sourced under the [MIT License](./LICENSE), meaning you're free to use, modify, and distribute the material, as long as proper attribution is given.
