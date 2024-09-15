@@ -42,4 +42,8 @@ To contribute:
 
 ## License
 
-This repository is open-sourced under the [MIT License](./LICENSE), meaning you're free to use, modify, and distribute the material, as long as proper attribution is given.
+This repository is open-sourced under the [GNU General Public License Version 2](./LICENSE), meaning you're free to use, modify, and distribute the material, as long as:
+- The source code is provided or made accessible.
+- Any modifications are shared under the same license.
+- No additional restrictions are imposed on users' rights.
+- The software is provided without any warranty.
