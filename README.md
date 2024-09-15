@@ -1,6 +1,6 @@
 # Teaching Repository
 
-Welcome to my **Teaching** repository! This collection contains lecture slides, supplementary materials, and source files I've created for teaching topics related to **Statistics, Mathematics, Machine Learning, and Artificial Intelligence**. The content is designed to be flexible, with opportunities for contributions and modifications, especially for those who want to expand or adjust the materials to suit their teaching styles.
+Welcome to my **Teaching** repository. This collection contains lecture slides, supplementary materials, and source files I've created for teaching topics related to **Statistics, Mathematics, Machine Learning, and Artificial Intelligence**. The content is designed to be flexible, with opportunities for contributions and modifications, especially for those who want to expand or adjust the materials to suit their teaching styles.
 
 ## Repository Structure
 
