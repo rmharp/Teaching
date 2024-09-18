@@ -63,7 +63,7 @@ class: middle
 
 - OpenNeuro uses the **BIDS** (Brain Imaging Data Structure) format to ensure consistency across datasets.
 - Example of a BIDS structure:
-  - **Subject folders** (e.g., `sub-001`) organize data.
+  - **Subject folders** (e.g. `sub-001`) organize data.
   - Subfolders like `anat` for anatomical scans, `func` for functional data (fMRI), with corresponding files (`.nii.gz`, `.json`, `.tsv`).
 - BIDS ensures datasets are **easy to understand** and **compatible with various tools**.
 
@@ -82,11 +82,11 @@ class: middle
 
 ####- **.nii**: **NIfTI** (Neuroimaging Informatics Technology Initiative), a standard file format used for storing neuroimaging data like MRI and fMRI scans. The `.nii` format holds the brain imaging data in a 3D or 4D array.
   
-####- **.gz**: A compressed version of files (e.g., `.nii.gz`); commonly used to reduce the size of large `.nii` files for easier storage and transfer, while maintaining the original data integrity.
+####- **.gz**: A compressed version of files (e.g. `.nii.gz`); commonly used to reduce the size of large `.nii` files for easier storage and transfer, while maintaining the original data integrity.
 
-####- **.json**: Stores **metadata** that describes how the neuroimaging data was acquired (e.g., scanner settings, subject details). This information is important for ensuring data reproducibility and understanding the conditions under which the data was collected.
+####- **.json**: Stores **metadata** that describes how the neuroimaging data was acquired (e.g. scanner settings, subject details). This information is important for ensuring data reproducibility and understanding the conditions under which the data was collected.
 
-####- **.tsv**: Tab-separated value files used to store **event-related information** (e.g., the timing of specific stimuli or tasks in an experiment), commonly associated with fMRI data and help link the recorded brain activity to behavioral or experimental events.
+####- **.tsv**: Tab-separated value files used to store **event-related information** (e.g. the timing of specific stimuli or tasks in an experiment), commonly associated with fMRI data and help link the recorded brain activity to behavioral or experimental events.
 
 ---
 class: middle
@@ -127,6 +127,50 @@ import openneuro as on
 
 on.download(dataset = "ds004711", destination="path")
 ```
+
+---
+class: middle
+
+# **AgeRisk Dataset**
+
+<p style="font-size: 32px;">
+This dataset contains neuroimaging data (N=187) from participants aged 16 to 81 years, collected as part of the AgeRisk study.
+</p>
+
+<p style="font-size: 32px;">
+The **neuroimaging session** included:
+</p>
+  - [**Balloon Analogue Risk Task (BART)**](https://www.youtube.com/watch?v=foy3ZVokjFM&ab_channel=JoggleResearch): 
+    - Conducted in **2 runs**, this task assesses risk-taking behavior.
+    - Participants inflate a balloon to earn rewards but risk popping the balloon and losing points.
+---
+
+class: middle
+
+# **AgeRisk Dataset (cont.)**
+
+- [**Delay Discounting Task**](https://www.youtube.com/watch?v=bJpG_27U-F4&ab_channel=NeuroscapeUCSF):
+  - Completed by **178 participants**, it measures impulsivity and self-control.
+  - Participants choose between smaller, immediate rewards or larger, delayed rewards.
+
+<p style="font-size: 32px;">
+The dataset includes:
+</p>
+  - **Structural scans** (T1w images)
+  - **Functional scans** during the tasks
+
+---
+class: middle
+
+# **Dataset Details**
+
+
+- Data was collected between *2016 and 2017* at the University Hospital Basel, Switzerland.
+- **Preprocessing:** The dataset was skull stripped using the FSL Brain Extraction Tool (BET).
+  - **Skull stripping** is the process of removing non-brain tissue (e.g. the skull, scalp, etc.) from MRI images to isolate the brain.
+  - Helps reduce noise and irrelevant data, ensuring the focus remains on the brain structures.
+- More information is contained in the *JSON sidecar files* included in the dataset.
+
 ---
 class: center, middle
 # Questions?
