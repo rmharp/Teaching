@@ -1,0 +1,182 @@
+---
+title: "UI/UX First Meeting"
+subtitle: "Introduction to Figma"
+author: "Riley Harper"
+institute: "UNC-Chapel Hill"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    mathjax: default
+    css: Introduction to Figma.css
+    nature:
+      highlightStyle: github
+      highlightLines: true
+---
+```{r include=FALSE}
+packages <- c("chromote", "pdftools", "xaringanExtra", "haven", "readr", "dplyr", "knitr", "withr", "htmltools", "reticulate", "xaringan", "kableExtra")
+
+for (package in packages) {
+  if (!require(package, character.only = TRUE)) {
+    install.packages(package)
+    library(package, character.only = TRUE)
+  }
+}
+
+xaringanExtra::use_tile_view()
+xaringanExtra::use_share_again()
+xaringanExtra::use_broadcast()
+xaringanExtra::use_scribble(pen_color = "#a4c4f4", pen_size = 8, eraser_size = 30)
+xaringanExtra::use_fit_screen()
+```
+class: middle
+# Agenda
+
+- Overview of the research project
+- Roles and expectations within the UI/UX team
+- Collaboration with the Systems team
+- UI/UX tools and methodologies
+- Introduction to Figma
+
+---
+class: middle
+# NeuroSpark Project Overview
+
+## Goals of the UI/UX Team:
+- Design intuitive, user-friendly interfaces to support the patient during surgery.
+- Create a cohesive user flow for the application.
+- Enhance the overall user experience, making the platform accessible, comfortable, and effective.
+
+## Project Scope:
+- The **UI/UX subteam** will focus on wireframing, prototyping, and usability testing.
+- The **Systems team** will be responsible for implementing the features designed by UI/UX.
+
+---
+class: middle
+# Systems Team Collaboration
+
+- The **UI/UX subteam** will focus on design and usability, while implementation will be performed in close collaboration with the Systems team.
+- Some example features that need to be created or redesigned are menu structures and interactive components.
+
+
+---
+class: middle
+# Systems Team Collaboration
+
+- **Slack Communication** to ensure designs are implementable and meet technical constraints.
+
+- **Shared documentation** to maintain clear communication between design and development.
+
+- **Prototyping feedback loops**: UI/UX will create prototypes, and the Systems team will provide feedback on the technical feasibility of features.
+
+---
+class: middle
+# Methods
+
+1. **Research**: Understand the user's needs, challenges, and behaviors through watching and critically analyzing the system as it is.
+2. **Wireframe**: Create basic layouts to map out functionality and user flow.
+3. **Prototype**: Develop interactive models to demonstrate how the final product will work.
+4. **Testing**: Conduct usability testing to gather feedback on the design.
+5. **Iterate**: Make adjustments based on user feedback and technical requirements.
+
+---
+class: middle
+# Tools
+
+- **Figma**: For wireframes, prototypes, and UI design.
+- **Survey**: For collecting user feedback we could try UserTesting, surveys or kind of model where AI@UNC members try out the system in exchange for providing feedback. Best case will be getting feedback from patients in surgery but the system should be made the best it can before getting to this stage.
+- **Slack**: For team communication.
+- **Drive/GitHub**: Project management.
+  
+---
+class: middle
+# Introduction to Figma
+
+### What is Figma?
+
+- **Figma** is a collaborative design tool that allows teams to work together in real time on the same project.
+- It's ideal for **UI/UX design**, enabling us to create wireframes, interactive prototypes, and design systems efficiently.
+
+---
+class: middle
+# Why Figma?
+
+- **Collaboration**: Multiple team members can work on the same file simultaneously.
+- **Version Control**: Track changes and revert to earlier designs easily.
+- **Interactive Prototypes**: Create clickable prototypes to simulate real user interactions before development.
+- **Cross-platform**: Works on any operating system via a web browser, making it easy to access and share.
+
+---
+class: middle
+# Figma Key Features
+
+1. **Design Systems**: Use consistent design elements (like buttons, icons, and typography) across the project.
+2. **Prototyping**: Build interactive prototypes with transitions, animations, and links between pages.
+3. **Comments**: Stakeholders and team members can leave comments directly on the designs, making feedback cycles faster.
+4. **Real-time Collaboration**: Watch your teammates make edits in real time and offer feedback as designs evolve.
+
+---
+class: middle
+# Figma Walkthrough
+
+### Setting Up a Project in Figma
+
+- **Step 1**: Create a new Figma file for our subteam's UI/UX designs.
+- **Step 2**: Establish a style guide (color schemes, fonts, buttons, etc.).
+- **Step 3**: Start wireframing the key screens for our project.
+
+---
+class: center, middle
+# <a href="https://www.youtube.com/embed/Cx2dkpBxst8?list=PLXDU_eVOJTx7QHLShNqIXL1Cgbxj7HlN4" style="color: black;">Figma</a>
+```{r, echo=FALSE}
+height <- 400
+width = height * (16/9)
+
+# Embed the Figma tutorial video
+htmltools::tags$iframe(
+  src = "https://www.youtube.com/embed/Cx2dkpBxst8?list=PLXDU_eVOJTx7QHLShNqIXL1Cgbxj7HlN4", 
+  width = width, 
+  height = height, 
+  frameborder = "0", 
+  allowfullscreen = TRUE
+)
+```
+
+---
+class: middle
+# Wireframing in Figma
+
+- A **wireframe** is a simple blueprint of the layout and functionality of a webpage or app screen.
+- Start by sketching out the core functionality of our application: home screens, navigation, and key surgeon and patient interactions.
+
+---
+class: middle
+# Building Interactive Prototypes
+
+- **Prototyping** in Figma allows us to simulate how users will interact with our designs.
+- We will link buttons and navigation items to create a **clickable prototype** that closely mirrors the final user experience.
+
+---
+class: center, middle
+# <a href="https://www.youtube.com/embed/-pkYrWvKVpk" style="color: black;">Minimum Viable Product</a>
+```{r, echo=FALSE}
+height <- 400
+width = height * (16/9)
+
+htmltools::tags$iframe(
+  src = "https://www.youtube.com/embed/-pkYrWvKVpk", 
+  width = width, 
+  height = height, 
+  frameborder = "0", 
+  allowfullscreen = TRUE
+)
+```
+---
+class: middle
+# Takehome
+- What could have been improved upon in the example shown in the video? Make a single Figma screen and present it to the team in our meeting next week. You should be able to explain why you made the design choices you did and what this new screen has that makes it better (both designwise and UXwise) in comparison to one of the screens which were already implemented.
+
+- For those who haven't previously used Figma, complete the Figma 101 course offered by [Designlab](https://designlab.com/figma-101-course/introduction-to-figma). The course is structured as a 7-day free course with 30 minutes for each day.
+
+---
+class: center, middle
+# Questions?
